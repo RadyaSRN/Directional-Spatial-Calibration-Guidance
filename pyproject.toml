@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "directional-spatial-calibration-guidance"
+version = "0.1.0"
+description = "Directional Spatial Calibration Guidance for diffusion and flow-matching samplers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.1",
+]
+
+[project.optional-dependencies]
+examples = [
+    "diffusers>=0.30",
+    "pillow",
+    "transformers",
+]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+include = ["dscg*"]
+
+[tool.ruff]
+line-length = 95
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "RUF"]
