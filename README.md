@@ -6,9 +6,6 @@ spatial positions where the residual is both locally strong and strongly aligned
 with the conditional prediction. The goal is to keep the global guidance strength
 while avoiding over-concentrated directional pushes.
 
-The implementation is intentionally small: one guidance function, four factor
-measurements, and single-GPU examples.
-
 ## Installation
 
 ```bash
@@ -21,7 +18,7 @@ For the diffusers example:
 pip install -e ".[examples]"
 ```
 
-## Minimal API
+## Usage
 
 ```python
 from dscg import dscg_guidance
